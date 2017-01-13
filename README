@@ -1,0 +1,7 @@
+Run utility scripts in this order:
+    1. Change-Passwords
+    2. Rename-System
+    3. Update-System
+    4. Set-Locale
+    5. Remove-RaspiToys
+    6. Add-Utilities 

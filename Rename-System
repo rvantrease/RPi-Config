@@ -1,0 +1,20 @@
+#-----------------------------------
+# Rename-System
+#   by Richard Vantrease (KA7RLV)
+#
+# Requires: SU
+#
+# Set a new name for the system
+# Changes: 
+#     /etc/hostname
+#     /etc/hosts
+#
+# ChangeLog
+# 2017-01-11 RV  New
+#------------------------------------
+
+nano /etc/hostname
+
+nano /etc/hosts
+
+shutdown -r 0

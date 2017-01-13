@@ -1,0 +1,35 @@
+#-----------------------------------
+# Get-SystemInfo
+#   by Richard Vantrease (KA7RLV)
+#
+# Gets Information about the system
+#
+# ChangeLog
+# 2017-01-11 RV  New
+#------------------------------------
+
+#List Debian version
+echo -e "Debian version:\t$(cat /etc/debian_version)"
+
+#List Kernel version
+echo -e "Kernel version:\t$(uname -r)"
+
+#List free/used disk space in human readable
+df -h
+
+#Get CPU/GPU memory split
+for mem in arm gpu; do echo -e "$mem:\t$(vcgencmd get_mem $mem)"; done
+
+#List available system memory
+free -o -h
+
+#List the CPU info
+grep 'model' /proc/cpuinfo | head -1
+# Other ways of getting the same info
+#    sed -n '/model/{p;q}' /proc/cpuinfo
+#    cat /proc/cpuinfo | grep 'model' | sed -n "1p"
+#    cat /proc/cpuinfo | grep 'model' | head -1
+
+echo -e "Number of processors:\t$(grep -c 'model' /proc/cpuinfo)"
+
+cat /proc/version

@@ -2,6 +2,8 @@
 # Remove-RaspiToys
 #   by Richard Vantrease (KA7RLV)
 #
+# Added statement that script requires SU
+#
 # Removes some of the toys I don't use from the Raspbian distro including:
 #     minecraft
 #     wolfram

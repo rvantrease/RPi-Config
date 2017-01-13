@@ -2,6 +2,8 @@
 # Set-Locale
 #   by Richard Vantrease (KA7RLV)
 #
+# Added statement that script requires SU
+#
 # This script runs two packages txdata and locales to set the timezone, and
 # locality information
 #
@@ -13,5 +15,8 @@
 # 2017-01-11 RV  New
 #-----------------------------------------------------------
 
+echo "Configure time zone data"
 dpkg-reconfigure tzdata
+
+echo "Configure locale"
 dpkg-reconfigure locales

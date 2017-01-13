@@ -11,6 +11,7 @@
 # ChangeLog
 # 2017-01-11 RV  New
 #-----------------------------------------------------------
+
 apt purge  minecraft wolfram sonic-pi mathmatica
 apt purge wolfram-engine
 

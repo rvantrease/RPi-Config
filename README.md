@@ -7,5 +7,6 @@ Run utility scripts in this order:
   - Update-System
   - Set-Locale
   - Remove-RaspiToys
-  - Add-Utilities 
+  - Add-Utilities
+  - Get-SystemInfo
   

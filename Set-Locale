@@ -1,9 +1,8 @@
-#-----------------------------------
+#-----------------------------------------------------------
 # Set-Locale
 #   by Richard Vantrease (KA7RLV)
 #
-# This script runs two packages txdata
-# and locales to set the timezone, and
+# This script runs two packages txdata and locales to set the timezone, and
 # locality information
 #
 # tzdata: https://wiki.debian.org/TimeZoneChanges
@@ -12,7 +11,7 @@
 #     Updates /etc/default/locale and /etc/locale.gen
 # ChangeLog
 # 2017-01-11 RV  New
-#------------------------------------
+#-----------------------------------------------------------
 
 dpkg-reconfigure tzdata
 dpkg-reconfigure locales

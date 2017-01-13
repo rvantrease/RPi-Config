@@ -2,6 +2,8 @@
 # Get-SystemInfo
 #   by Richard Vantrease (KA7RLV)
 #
+# Requires SU
+#
 # Gets Information about the system
 #
 # ChangeLog

@@ -1,0 +1,13 @@
+#-----------------------------------------------------------
+# Add-Utilities
+#   by Richard Vantrease (KA7RLV)
+#
+# Requires SU
+#
+# Add utilities that I want on all of my systems
+#
+# ChangeLog
+# 2017-01-11 RV  New
+#-----------------------------------------------------------
+
+apt-get install zip

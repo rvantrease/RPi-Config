@@ -1,9 +1,8 @@
-#-----------------------------------
+#-----------------------------------------------------------
 # Remove-RaspiToys
 #   by Richard Vantrease (KA7RLV)
 #
-# Removes some of the toys I don't use
-# from the Raspbian distro including:
+# Removes some of the toys I don't use from the Raspbian distro including:
 #     minecraft
 #     wolfram
 #     sonicpi
@@ -11,8 +10,7 @@
 #
 # ChangeLog
 # 2017-01-11 RV  New
-#------------------------------------
-
+#-----------------------------------------------------------
 apt purge  minecraft wolfram sonic-pi mathmatica
 apt purge wolfram-engine
 

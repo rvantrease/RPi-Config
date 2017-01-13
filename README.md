@@ -2,7 +2,7 @@
 Configuration files for RPi
 
 Run utility scripts in this order:
-  - [Change Passwords](#Change-Passwords-Script)
+  - Change Passwords
   - Rename-System
   - Update-System
   - Set-Locale

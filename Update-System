@@ -1,3 +1,13 @@
+#-----------------------------------------------------------
+# Script-Name
+#   by Richard Vantrease (KA7RLV)
+#
+# Description of what the script does more description
+#
+# ChangeLog
+# 2017-01-11 RV  New
+#-----------------------------------------------------------
+
 sudo apt-get update
 sudo apt-get dist-upgrade
 sudo apt-get autoclean

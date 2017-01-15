@@ -1,0 +1,26 @@
+#-----------------------------------------------------------
+# Add-Services
+#   by Richard Vantrease (KA7RLV)
+#
+# Requires SU
+#
+# Installs the following packages
+#     mysql
+#     apache2
+#     libapache2-mod-php5
+#     dokuwiki
+#
+# ChangeLog
+# 2017-01-11 RV  New
+#-----------------------------------------------------------
+
+apt-get install mysql apache2 libapache2-mod-php5
+
+# Enable Apache Rewrite module
+a2enmod rewrite
+
+# Install DokuWiki
+## Configure debconf to allow for more configuration options
+sudo dpkg-reconfigure debconf
+## Install DokuWiki
+sudo apt-get install dokuwiki

@@ -4,8 +4,11 @@
 #
 # Requires SU
 #
-# Description of what the script does
-# more description
+# Installs the following packages
+#     mysql
+#     apache2
+#     libapache2-mod-php5
+#     dokuwiki
 #
 # ChangeLog
 # 2017-01-11 RV  New
@@ -16,34 +19,8 @@ apt-get install mysql apache2 libapache2-mod-php5
 # Enable Apache Rewrite module
 a2enmod rewrite
 
-## Do this instead for DokuWiki
-## https://wiki.debian.org/DokuWiki
-## https://www.dokuwiki.org/install:debian
-
-
-# Download and uncompress the latest stable release of DokuWiki
-cd /var/www
-sudo wget https://download.dokuwiki.org/src/dokuwiki/dokuwiki-stable.tgz
-sudo tar xvf dokuwiki-stable.tgz
-sudo mv dokuwiki-*/ dokuwiki
-
-# Change permissions on files
-chown -R www-data:www-data /var/www/dokuwiki
-
-# Change document root in Apache to point to /var/www/dokuwiki
-#    Replace: /var/www/html
-#    With:    /var/www/dokuwiki
-# nano /etc/apache2/sites-enabled/000*.conf
-
-# Change AllowOverrides setting in Apache2 to use .htaccess files for security
-#    Replace: /var/www AllowOverride None
-#    With:    AllowOverride All 
-# nano /etc/apache2/apache2.conf
-
-# Restart Apache2 service
-# service apache2 restart
-
-# Browse to http://localhost/install.php to configure
-
-# Delete install.php file after installing
-# rm /var/www/dokuwiki/install.php
+# Install DokuWiki
+## Configure debconf to allow for more configuration options
+sudo dpkg-reconfigure debconf
+## Install DokuWiki
+sudo apt-get install dokuwiki

@@ -1,3 +1,4 @@
+#!/bin/bash
 #-----------------------------------------------------------
 # Get-SystemInfo
 #   by Richard Vantrease (KA7RLV)
@@ -8,6 +9,8 @@
 #
 # ChangeLog
 # 2017-01-11 RV  New
+# 2018-02-16 RV  Added shebang, and changed free command due
+#                due to error
 #-----------------------------------------------------------
 
 #List Debian version
@@ -23,7 +26,7 @@ df -h
 for mem in arm gpu; do echo -e "$mem:\t$(vcgencmd get_mem $mem)"; done
 
 #List available system memory
-free -o -h
+free -m -h
 
 #List the CPU info
 grep 'model' /proc/cpuinfo | head -1
